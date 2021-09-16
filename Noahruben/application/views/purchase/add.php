@@ -1,0 +1,89 @@
+
+
+<div class="row">
+	<div class="col-md-12">
+		<div class="box box-info">
+			<div class="box-header with-border">
+				<h3 class="box-title">Purchase Add</h3>
+			</div>
+			<?php echo form_open('purchase/add'); ?>
+			<div class="box-body">
+				<div class="row clearfix">
+					<div class="col-md-6">
+					
+					</div>
+					<div class="col-md-6">
+						<label for="purchase_price" class="control-label"><span class="text-danger">*</span>Name</label>
+						<div class="form-group">
+							<input type="text" name="customer_name" id="qty" value="<?php echo $this->input->post('customer_name'); ?>" class="form-control" id="customer_name" required />
+							<span class="text-danger"><?php echo form_error('customer_name');?></span>
+						</div>
+					</div>
+					<div class="col-md-3">
+						<label for="qty" class="control-label"><span class="text-danger">*</span>Phone Number</label>
+						<div class="form-group">
+							<input type="text" name="phone" id="qty" value="<?php echo $this->input->post('phone'); ?>" class="form-control" id="phone" />
+							<span class="text-danger"><?php echo form_error('phone');?></span>
+						</div>
+					</div>
+						<div class="col-md-3">
+						<label for="qty" class="control-label"><span class="text-danger">*</span>City</label>
+						<div class="form-group">
+							<input type="text" name="city" id="qty" value="<?php echo $this->input->post('city'); ?>" class="form-control" id="city" />
+							<span class="text-danger"><?php echo form_error('city');?></span>
+						</div>
+					</div>
+
+						<div class="col-md-3">
+						<label for="qty" class="control-label"><span class="text-danger">*</span>Address</label>
+						<div class="form-group">
+							<input type="text" name="address" id="address" value="<?php echo $this->input->post('address'); ?>" class="form-control" id="address" />
+							<span class="text-danger"><?php echo form_error('address');?></span>
+						</div>
+					</div>
+						<div class="col-md-3">
+						<label for="qty" class="control-label"><span class="text-danger">*</span>Email</label>
+						<div class="form-group">
+							<input type="text" name="delivery" id="delivery" value="<?php echo $this->input->post('delivery'); ?>" class="form-control" id="delivery" />
+							<span class="text-danger"><?php echo form_error('delivery');?></span>
+						</div>
+					</div>
+						<div class="col-md-3">
+						<label for="qty" class="control-label"><span class="text-danger">*</span>Charged</label>
+						<div class="form-group">
+							<input type="text" name="charged" id="charged" value="<?php echo $this->input->post('charged'); ?>" class="form-control" id="charged" />
+							<span class="text-danger"><?php echo form_error('charged');?></span>
+						</div>
+					</div>
+						
+					<div class="col-md-6">
+                        <label for="date_created" class="control-label"><span class="text-danger"></span>Date</label>
+                        <div class="form-group">
+                            <div class='input-group date' id='datetimepicker10'>
+                                <input type='Date' name="date_created" class="form-control" />
+                                <span class="input-group-addon">
+                                    <span class="glyphicon glyphicon-calendar"></span>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+
+				</div>
+			</div>
+			<div class="box-footer">
+				<button type="submit" class="btn btn-success">
+					<i class="fa fa-check"></i> Save
+				</button>
+			</div>
+			<?php echo form_close(); ?>
+		</div>
+	</div>
+</div>
+<script>
+	$(function() {
+		$('#datetimepicker1').datetimepicker({
+			viewMode: 'years',
+			format: 'YYYY/MM/DD'
+		});
+	});
+</script>
